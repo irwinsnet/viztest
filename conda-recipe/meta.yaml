@@ -1,0 +1,25 @@
+{% set version = "0.1.0" %}
+
+package:
+  name: viztest
+  version: {{ version }}
+
+source:
+  path: C:\Users\stacy\OneDrive\Projects1318\scouting\2023\viztest\src
+
+  build:
+    noarch: python
+    number: 0
+    script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
+
+requirements:
+  build:
+    - python
+    - pip
+  run:
+    - python
+    - bokeh
+
+# about:
+#   license_file: LICENSE
+#     summary: "Demo project for Bokeh and creating packages"
